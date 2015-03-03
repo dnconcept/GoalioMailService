@@ -59,7 +59,7 @@ class Message implements ServiceManagerAwareInterface {
      *            Either the template to use, or a ViewModel
      * @param null|array $values
      *            Values to use when the template is rendered
-     * @return Message
+     * @return MailMessage
      */
     public function createHtmlMessage($from, $to, $subject, $nameOrModel, $values = array()) {
         $renderer = $this->getRenderer();
@@ -91,7 +91,7 @@ class Message implements ServiceManagerAwareInterface {
      *            Either the template to use, or a ViewModel
      * @param null|array $values
      *            Values to use when the template is rendered
-     * @return Message
+     * @return MailMessage
      */
     public function createTextMessage($from, $to, $subject, $nameOrModel, $values = array()) {
         $renderer = $this->getRenderer();
